@@ -383,6 +383,7 @@ textarea:focus {
   position: absolute;
   bottom: 100%;
   margin-bottom: 10px;
+  border-radius: 50%;
 }
 
 .popup__close {
