@@ -288,7 +288,7 @@ let similarAd = [
     },
     {
       "author": {
-        "avatar": "img/avatars/default.png"
+        "avatar": "img/avatars/user08.png"
       },
       "offer": {
         "title": "Милое гнездышко для фанатов Анимэ",
