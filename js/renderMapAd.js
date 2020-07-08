@@ -1,4 +1,4 @@
-
+( () => {
 let cardTemplate = document.querySelector('template').content.querySelector('.map__card');
 let mapWindow = document.querySelector('.map');
 
@@ -31,35 +31,42 @@ let mapWindow = document.querySelector('.map');
 
         const getFeatures = (featuresArray) => {
             
-
             if (featuresArray.length === 0) {
                 return featuresFragment;
             } else {
-                return renderFeatures(featuresArray);
+
+                for (let i = 0; i < featuresArray.length; i++) {
+                    let featuresElement = document.createElement('li');
+                    featuresElement.classList.add('feature', `feature--${featuresArray[i]}`);
+                    featuresFragment.append(featuresElement);
+                }
+    
+                return featuresFragment;
             }
             
-        }
-
-        const renderFeatures = (featuresData) => {
-        
-            for (let i = 0; i < featuresData.length; i++) {
-                let featuresElement = document.createElement('li');
-                featuresElement.classList.add('feature');
-                let featureElementClass = `feature--${featuresData[i]}`
-                featuresElement.classList.add(featureElementClass);
-                featuresFragment.append(featuresElement);
-            }
-
-            return featuresFragment;
-
         }
 
         cardElement.querySelector('.popup__features').append(getFeatures(cardObject.offer.features)); 
         cardElement.querySelector('.popup__description').textContent = cardObject.offer.description;
 
-        cardElement.querySelector('.popup__pictures').append(insertImages(cardObject.offer.photos));
 
 
+        const renderImage = (imageList) => {
+            let fragment = document.createDocumentFragment();
+            for (i = 0; i < imageList.length; i++) {
+                let listItem = document.createElement('li');
+                listItem.classList.add('popup__pictures');
+                let image = document.createElement('img');
+
+                image.src = imageList[i];
+
+                listItem.append(image);
+                fragment.append(listItem);
+            }
+            return fragment;
+        }
+
+        cardElement.querySelector('.popup__pictures').append(renderImage(cardObject.offer.photos));
 
         return cardElement;
     };
@@ -71,3 +78,4 @@ let mapWindow = document.querySelector('.map');
     };
 
 mapWindow.insertBefore(cardFragment, mapWindow.querySelector('.map__filters-container'));
+})();
