@@ -382,7 +382,8 @@ textarea:focus {
   vertical-align: middle;
 }
   .popup__pictures img {
-    width: 200px;
+    width: 150px;
+    height: 50px;
 
   }
 .popup__avatar {
