@@ -5,7 +5,7 @@
     let pinTemplate = document.querySelector('template').content.querySelector('button.map__pin');
     let fragment = document.createDocumentFragment();
 
-    mapWindow.classList.remove('map--faded');
+    // mapWindow.classList.remove('map--faded');
 
     const renderMapPins = (pinObject) => {
         let pinElement = pinTemplate.cloneNode(true);
