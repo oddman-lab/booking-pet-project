@@ -1,3 +1,4 @@
+"use strict";
 (() => {
 // SET ATTRIBUTE FOR SHOWING AD ON PINS CLICK
 

@@ -1,3 +1,4 @@
+"use strict";
 ( () => {
 let cardTemplate = document.querySelector('template').content.querySelector('.map__card');
 let mapWindow = document.querySelector('.map');
