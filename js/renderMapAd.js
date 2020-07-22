@@ -1,5 +1,6 @@
 "use strict";
-( () => {
+( function() {
+
 let cardTemplate = document.querySelector('template').content.querySelector('.map__card');
 let mapWindow = document.querySelector('.map');
 
@@ -54,7 +55,7 @@ let mapWindow = document.querySelector('.map');
 
         const renderImage = (imageList) => {
             let fragment = document.createDocumentFragment();
-            for (i = 0; i < imageList.length; i++) {
+            for (let i = 0; i < imageList.length; i++) {
                 let listItem = document.createElement('li');
                 listItem.classList.add('popup__pictures');
                 let image = document.createElement('img');

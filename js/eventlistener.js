@@ -1,5 +1,5 @@
 "use strict";
-(() => {
+(function() {
 // SET ATTRIBUTE FOR SHOWING AD ON PINS CLICK
 
 let allPinButton = document.querySelectorAll('.pin--similar');

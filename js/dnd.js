@@ -1,5 +1,6 @@
 "use strict";
-(() => {
+(function() {
+    
 const disableFieldsets = (isDisable) => {
     let fieldsets = document.querySelectorAll('fieldset');
 
