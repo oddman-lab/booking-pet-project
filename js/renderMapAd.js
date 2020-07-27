@@ -29,10 +29,11 @@ let mapWindow = document.querySelector('.map');
         cardElement.querySelector('.popup__text--capacity').textContent = `${cardObject.offer.rooms} комнат${cardObject.offer.rooms > 1 ? 'ы':'а'} для ${cardObject.offer.guests} гостей`;
         cardElement.querySelector('.popup__text--time').textContent = `Заезд после ${cardObject.offer.checkin}, выезд до ${cardObject.offer.checkout}`;
         
-        window.featuresFragment = document.createDocumentFragment();
+       
 
         const getFeatures = (featuresArray) => {
-            
+            let featuresFragment = document.createDocumentFragment();
+
             if (featuresArray.length === 0) {
                 return featuresFragment;
             } else {
