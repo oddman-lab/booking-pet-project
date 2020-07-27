@@ -7,8 +7,8 @@ let allPopups = document.querySelectorAll('.popup');
 
 const associateWindowButtons = (buttonArray, popupArray) => {
     for (let i=0; i < popupArray.length; i++) {
-        buttonArray[i].setAttribute('id', `buttonForPopup--${i}`);
-        popupArray[i].setAttribute('id', `popupForButton--${i}`);
+        buttonArray[i].setAttribute('data-event', `${i}`);
+        popupArray[i].setAttribute('data-event', `${i}`);
     }
 }
 
@@ -22,13 +22,13 @@ const isEscKeycode = (evt, currentPop) => evt.keyCode === 27 ? hidePopup(current
 
 
 const searchTargetPin = (evt) => {
-    let currentClick = evt.currentTarget.id;
-
+    let currentClick = evt.currentTarget.dataset.event;
+    
     for (let i = 0; i < allPopups.length; i++) {
-        let currentPopup = allPopups[i].id;
+        let currentPopup = allPopups[i].dataset.event;
         let currentCloseButton = allPopups[i].querySelector('.popup__close');
         
-        if (currentPopup[currentPopup.length - 1] === currentClick[[currentClick.length - 1]]) {
+        if (currentPopup === currentClick) {
             showPopup(allPopups[i]);
 
             currentCloseButton.addEventListener('click', () => {
@@ -39,7 +39,7 @@ const searchTargetPin = (evt) => {
                 isEscKeycode(keydownEvt, allPopups[i]);
             })
 
-        } else if (currentClick[[currentClick.length - 1]] !== currentPopup[currentPopup.length - 1]) {
+        } else if (currentPopup !== currentClick) {
             hidePopup(allPopups[i]);
         };
     };
