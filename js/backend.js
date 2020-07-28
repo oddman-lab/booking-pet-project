@@ -21,6 +21,7 @@
             switch (xhr.status) {
                 case ServerCode.SUCCESS:
                     onSuccess(xhr.response);
+                    console.log(xhr.response);
                     break;
                 case ServerCode.BAD_REQUEST:
                     error = 'Неверный запрос';
@@ -46,7 +47,7 @@
 
         xhr.timeout = 10000;
         xhr.addEventListener('timeout', function () {
-        onError(`Запрос не успел выполниться за ${xhr.timeout}`);
+            onError(`Запрос не успел выполниться за ${xhr.timeout}`);
         });
     
         return xhr;
@@ -59,10 +60,11 @@
         xhr.send();
     };
 
-    const sendData = (formData, onSuccess, onError) => {
+    const sendData = (data, onSuccess, onError) => {
         let xhr = getXHR(onSuccess, onError);
+
         xhr.open('POST', URL.upload)
-        xhr.send(formData);
+        xhr.send(data);
     };
 
 

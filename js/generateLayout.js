@@ -32,4 +32,5 @@
     };
 
     window.backend.load(generateLayout, onError);
+
 })();
