@@ -1,44 +1,5 @@
 "use strict";
 (function() {
-    
-const disableFieldsets = (isDisable) => {
-    let fieldsets = document.querySelectorAll('fieldset');
-
-    for (let fieldset of fieldsets) {
-        fieldset.disabled = isDisable;
-    };
-};
-
-const hideAllPopups = (isHide) => {
-    let popups = document.querySelectorAll('.map__card');
-
-    for (let popup of popups) {
-        if (isHide) {
-            popup.classList.add('visuallyhidden');
-        };
-    };
-};
-
-const hideMapPins = (isHide) => {
-    let pins = document.querySelectorAll('.pin--similar');
-
-    for (let pin of pins) {
-        if (isHide) {
-            pin.classList.add('visuallyhidden');
-        } else if (!isHide) {
-            setTimeout( () => {
-                pin.classList.remove('visuallyhidden');
-            }, 1000)
-            
-        }
-    };
-};
-
-disableFieldsets(true);
-hideAllPopups(true);
-hideMapPins(true);
-
-
 // MAIN D'N'D
 
 let mainPin = document.querySelector('.map__pin--main');
@@ -51,8 +12,8 @@ mainPin.addEventListener('mousedown', (evt) => {
 
     map.classList.remove('map--faded');
     mainForm.classList.remove('notice__form--disabled');
-    hideMapPins(false)
-    disableFieldsets(false);
+    window.switchState.pins(false);
+    window.switchState.fieldsets(false);
  
 
     let startCoords = {
