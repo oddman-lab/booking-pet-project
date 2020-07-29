@@ -85,7 +85,12 @@
   <div class="notice">
     <h2 class="notice__title">Ваше объявление</h2>
 
-    <form class="notice__form notice__form--disabled" method="post" enctype="multipart/form-data" autocomplete="off">
+    <form class="notice__form notice__form--disabled" 
+    method="post" 
+    action="https://javascript.pages.academy/keksobooking"
+    enctype="multipart/form-data" 
+    autocomplete="off">
+
       <fieldset class="notice__header">
         <legend>Ваша фотография (для карты)</legend>
         <div class="notice__photo">
@@ -102,7 +107,7 @@
 
       <fieldset class="form__element form__element--wide">
         <label for="title">Заголовок объявления</label>
-        <input id="title" name="title" type="text" placeholder="Милая, уютная квартирка в центре Токио" maxlength="100" minlength="30" required>
+        <input id="title" name="title" type="text" placeholder="Милая, уютная квартирка" maxlength="100" minlength="30" required>
       </fieldset>
 
       <fieldset class="form__element form__element--wide">
@@ -122,7 +127,7 @@
 
       <fieldset class="form__element">
         <label for="price">Цена за ночь, руб.</label>
-        <input id="price" name="price" type="number" placeholder="5000" maxlength="1000000" minlength="10" required>
+        <input id="price" name="price" type="number" placeholder="от 1000 Р/ночь" minlength="4" max="1000000" required>
       </fieldset>
 
       <fieldset class="form__element">
@@ -201,6 +206,13 @@
         или <button class="form__reset" type="reset">очистить</button>
       </fieldset>
     </form>
+    <div class="success-message visuallyhidden">
+      <h1 class="sucess-message__title">Ваше объявление <span>успешно</span> отправлено!</h1>
+      <p class="sucess-message__text">
+        В скором времени мы пришлем вам уведомление, что ваше объявление прошло модерацию. (нет)
+        👽
+      </p>
+    </div>
   </div>
 </main>
 
@@ -240,12 +252,12 @@
     <img src="img/avatars/user07.png" width="40" height="40" draggable="false">
   </button>
 </template>
-<script src="js/data.js"></script>
-<script src="js/renderMapPins.js"></script>
-<script src="js/renderMapAd.js"></script>
+<script src="js/backend.js"></script>
+<script src="js/form.js"></script>
+<script src="js/generateLayout.js"></script>
+<script src="js/render.js"></script>
 <script src="js/switchState.js"></script>
 <script src="js/dnd.js"></script>
-<script src="js/linkingElements.js"></script>
-<script src="js/eventlistener.js"></script>
+<script src="js/startListening.js"></script>
 </body>
 </html>
