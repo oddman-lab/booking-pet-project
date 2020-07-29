@@ -1,7 +1,8 @@
 "use strict";
 (function() {
     const disableFieldsets = (isDisable) => {
-    let fieldsets = document.querySelectorAll('fieldset');
+        let fieldsets = document.querySelectorAll('fieldset');
+        document.querySelector('.success-message').classList.add('visuallyhidden')
 
         for (let fieldset of fieldsets) {
             fieldset.disabled = isDisable;
