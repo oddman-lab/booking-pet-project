@@ -27,20 +27,12 @@ function renderAdsСards(adsData, indexOfAd) {
     cardElement.querySelector('.popup__text--address').textContent = adsData.offer.address;
     cardElement.querySelector('.popup__text--price').textContent = adsData.offer.price + ' ₽/ночь';
 
-    // TODO REPLACE THIS FUNC ON DICT-OBJECT
-    const getOfferType = (offerType) => {
-        if (offerType === 'house') {
-            return 'Дом'
-        } else if (offerType === 'flat') {
-            return 'Квартира'
-        } else if (offerType === 'bungalo') {
-            return 'Бунагло'
-        } else if (offerType === 'place') {
-            return 'Дворец'
-        } else {
-            return 'Уточняется ...'
-        }
-    }
+    let offerTypeToString = {
+        "flat": "Квартира",
+        "palace": "Дворец",
+        "bungalo": "Бунгало",
+        "house": "Дом",
+    };
 
     const getFeatures = (featuresArray) => {
         let featuresFragment = document.createDocumentFragment();
@@ -72,7 +64,7 @@ function renderAdsСards(adsData, indexOfAd) {
         return fragment;
     }
     
-    cardElement.querySelector('.popup__type').textContent = getOfferType(adsData.offer.type);
+    cardElement.querySelector('.popup__type').textContent = offerTypeToString[adsData.offer.type]
     cardElement.querySelector('.popup__text--capacity').textContent = `${adsData.offer.rooms} комнат${adsData.offer.rooms > 1 ? 'ы':'а'} для ${adsData.offer.guests} гостей`;
     cardElement.querySelector('.popup__text--time').textContent = `Заезд после ${adsData.offer.checkin}, выезд до ${adsData.offer.checkout}`;
     cardElement.querySelector('.popup__features').append(getFeatures(adsData.offer.features)); 
