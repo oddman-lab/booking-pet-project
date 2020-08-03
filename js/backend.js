@@ -1,7 +1,7 @@
 "use strict";
 (function() {
     const URL = {
-        download: 'https://javascript.pages.academy/keksobooking/data',
+        download: 'https://raw.githubusercontent.com/oddman-lab/javascript-basic/master/databooking.json',
         upload: 'https://javascript.pages.academy/keksobooking',
     };
 
@@ -21,6 +21,7 @@
             switch (xhr.status) {
                 case ServerCode.SUCCESS:
                     onSuccess(xhr.response);
+                    window.dataObj = xhr.response;
                     console.log(xhr.response);
                     break;
                 case ServerCode.BAD_REQUEST:
