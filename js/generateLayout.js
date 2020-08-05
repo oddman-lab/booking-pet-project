@@ -1,5 +1,5 @@
 (function() {
-    const generateLayout = (data) => {
+    window.generateLayout = (data) => {
         let markerFragment = document.createDocumentFragment();
         let popupFragment = document.createDocumentFragment();
 
@@ -31,6 +31,7 @@
         document.body.insertAdjacentElement('afterbegin', errorNode);
     };
 
+    
     window.backend.load(generateLayout, onError);
 
 })();
