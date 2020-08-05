@@ -1,5 +1,6 @@
 body {
   background-color: #f0f0ea;
+  background-image: url('/img/dot-grid.png');
   margin: 0 auto;
   max-width: 1200px;
 
@@ -35,18 +36,22 @@ button[type=submit] {
   font-weight: bold;
   font-family: Roboto, sans-serif;
 
-  border-radius: 8px;
-  border: 4px solid #ffaa99;
+  border-radius: 12px;
+  border: 2px solid #e91e63;
+
+  transition: all 0.25s ease-in;
 }
 
 button[type=submit]:hover {
-  border-color: #ff6d51;
+  color: #ffffff;
+  background-color: #e91e63;
+  transition: all 0.25s ease-in;
 }
 
 button[type=submit]:active {
   outline: none;
-  border-color: #ff6d51;
-  background-color: #ff6d51;
+  border-color: #e91e63;
+  background-color: #e91e63;
   color: white;
 }
 
@@ -73,7 +78,7 @@ input[type=text]:hover,
 input[type=number]:hover,
 select:hover,
 textarea:hover {
-  border-color: #ffaa99;
+  border-color: #e91e63;
 }
 
 input[type=text]:focus,
@@ -115,7 +120,7 @@ textarea:focus {
 }
 
 .features input:checked + label {
-  background-color: #ff6547;
+  background-color: #e91e63;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) inset;
 }
 
@@ -167,7 +172,6 @@ textarea:focus {
   top: 40px;
   transform: translateX(-50%);
 
-  /* background: url("../img/logo.png") no-repeat center; */
 }
 
 .map {
@@ -532,6 +536,7 @@ textarea:focus {
 }
 
 .form__element label {
+  color: #000000;
   display: block;
   padding-bottom: 5px;
 }
@@ -554,7 +559,7 @@ textarea:focus {
 }
 
 .notice__form input:checked + .feature {
-  background-color: #ff5635;
+  background-color: #e91e63;
 }
 
 .notice__form .feature--wifi {
@@ -614,7 +619,7 @@ textarea:focus {
 }
 
 .notice__form .drop-zone:hover {
-  color: #ff5635;
+  color: #e91e63;
 }
 
 .form__photo-container {
@@ -710,7 +715,7 @@ textarea:focus {
   vertical-align: top;
   text-indent: -1999em;
 
-  background: url("../img/social-sprite.png") no-repeat -59px -59px;
+  /* background: url("../img/social-sprite.png") no-repeat -59px -59px; */
   opacity: 0.6;
 }
 
@@ -718,14 +723,8 @@ textarea:focus {
   opacity: 1;
 }
 
-.footer-social-item-instagram {
-  background-position: -10px -59px;
+.footer-social-item-git {
+  background: url("../img/github.svg") no-repeat center;
+  padding: 20px;
 }
 
-.footer-social-item-facebook {
-  background-position: -59px -10px;
-}
-
-.footer-social-item-vk {
-  background-position: -10px -10px;
-}
