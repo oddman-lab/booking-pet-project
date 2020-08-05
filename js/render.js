@@ -1,3 +1,4 @@
+"use strict";
 (function() {
 window.render = {
     markers: renderMarkers,

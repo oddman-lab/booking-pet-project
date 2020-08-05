@@ -1,3 +1,4 @@
+"use strict";
 (function() {
     window.generateLayout = (data) => {
         let markerFragment = document.createDocumentFragment();
