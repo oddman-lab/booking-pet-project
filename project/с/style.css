@@ -1,0 +1,142 @@
+body {
+  font-family: 'Exo 2', sans-serif;
+}
+.calc {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.calc__display {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: #3F6054;
+  box-shadow: -2px 1px 2px rgba(0,0,0,0.15), 
+                2px 1px 2px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  width: 410px;
+  height: 150px;
+  transform: translateY(110px);
+  transition: transform 0.25s ease;
+  z-index: -1;
+}
+    .show-display {
+      cursor: pointer;
+      transform: translateY(10px);
+    }
+.calc__name {
+  align-self: flex-start;
+  color: #d4d4d4;
+  padding: 5px;
+  font-size: 12px;
+  font-style: italic;
+}
+.previouse-input {
+  color: #ffffff;
+  opacity: 0.6;
+  font-size: 24px;
+  text-align: right;
+  word-break: break-word;
+}
+.current-input {
+  color: #ffffff;
+  font-size: 48px;
+  padding-bottom: 40px;
+  text-align: right;
+  word-break: break-word;
+}
+.calc__body {
+  background-color: #253e35;
+  box-shadow: -2px 1px 2px rgba(0,0,0,0.15), 
+               2px 1px 2px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  width: 420px;
+  height: 600px;
+}
+.disp-btn {
+  margin: 25px;
+  background: none;
+  border: none;
+  outline: none;
+  width: 90%;
+}
+  .disp-btn .fas {
+    font-size: 24px;
+    color: deeppink;
+    text-align: center;
+    transition: all 0.55s ease;
+  }
+  .disp-btn:hover .fas {
+    transform: scale(1.2);
+    text-shadow: 0px -8px 0px deeppink,
+                 0px -16px 0px deeppink;
+  }
+.body__main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+  .body__main button {
+    font-family: 'Exo 2', sans-serif;
+    color: #eef4ea;
+    border-radius: 10%;
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+    font-size: 32px;
+    border: none;
+    outline: none;
+    background: none;
+  }
+  button.operation-char {
+    border-radius: 20px;
+    background-color: #2e4e46;
+  }
+  button.operation-char.clear,
+  button.operation-char.equal {
+    color: #26382f;
+    background-color: #f1f7ed;
+  }
+  .body__main button:hover,
+  .body__main button:active {
+    opacity: 0.5;
+  }
+.body__extended {
+  width: 220px;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: #0A2B1F;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-left: 20px;
+  position: relative;
+  bottom: 80%;
+  left: 50%;
+  transition: all 0.25s ease-in-out;
+  transform: translateX(0px);
+  opacity: 1;
+  z-index: -1;
+}
+
+.body__extended_show {
+  transform: translateX(210px);
+  transition: all 0.25s ease-in;
+  opacity: 1;
+  
+}
+.wrap > button.operation-char {
+  background: none;
+  border: none;
+  outline: crimson;
+  
+}
+.wrap > button.operation-char:hover {
+  color: red;
+}
+.fa-hard-hat_engiOn {
+  color: coral;
+}

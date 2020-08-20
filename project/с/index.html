@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/87a4289024.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+  <title>Document</title>
+</head>
+<body>
+<div class="calc">
+  <div class="calc__display">
+    <!-- <span class="calc__name">odd-calculator 3000</span> -->
+    <div data-previouse-input class="previouse-input"></div>
+    <div data-current-input class="current-input"></div>
+  </div>
+  <div class="calc__body">
+    <button class="disp-btn">
+      <i class="fas fa-angle-up" aria-hidden="true"></i>
+    </button>
+    <div class="body__main">
+      <button data-allclear class="operation-char clear">C</button>
+      <button data-operand class="operation-char">%</button>
+      <button data-operand value="*" class="operation-char">*</button>
+      <button data-delete class="operation-char"><i class="fas fa-backspace"></i></button>
+      <button data-number>7</button>
+      <button data-number>8</button>
+      <button data-number>9</button>
+      <button data-operand class="operation-char">÷</button>
+      <button data-number>4</button>
+      <button data-number>5</button>
+      <button data-number>6</button>
+      <button data-operand class="operation-char">-</button>
+      <button data-number>1</button>
+      <button data-number>2</button>
+      <button data-number>3</button>
+      <button data-operand class="operation-char">+</button>
+      <button class="extended__calc"><i class="fas fa-hard-hat"></i></button>
+      <button data-number>0</button>
+      <button data-number>.</button>
+      <button data-equal class="operation-char equal">=</button>
+    </div>
+
+    <div class="body__main body__extended">
+      <div class="wrap">
+        <button data-square class="operation-char">
+          <i class="fas fa-square-root-alt"></i>
+        </button>
+        <button data-degree class="operation-char">
+          x<sup>2</sup>
+        </button>
+        <button data-degree3 class="operation-char">
+          x<sup>3</sup>
+        </button>
+        <button data-ten-degree class="operation-char">
+          10<sup>x</sup>
+        </button>
+      </div>
+      <div class="wrap">
+        <button class="operation-char">!</button>
+        <button class="operation-char">sin</button>
+        <button class="operation-char">cos</button>
+        <button class="operation-char">tan</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
